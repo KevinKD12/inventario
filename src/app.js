@@ -13,6 +13,7 @@ app.set("port",4000)
 
 /* routes */
 app.use("/api/categorias",categoriaRoutes)
+
 /* se exporta para hacer disponible la app  */
 export default app;
 

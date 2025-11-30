@@ -1,11 +1,19 @@
 import {Router} from "express";
+import express from "express";
 import { methodHTTP as categoriaController } from "../controllers/categorias.controllers.js";
+import { obtenerCategorias } from "../controllers/categorias.controllers.js";
 
-/* creamos el enrutador */
-const router= Router();
+/* const router= Router();
+ */
 
-/* get */
-router.get("/",categoriaController.getCategorias )
+/* router.get("/",categoriaController.getCategorias )
 
-/* hacemos disponible a router en td la app*/
+ */
+/* export default router;
+ */
+
+const router = express.Router();
+
+router.get("/all",obtenerCategorias);
+
 export default router;
